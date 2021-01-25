@@ -1,6 +1,6 @@
-package Creational.AbstractFactory5.Factory;
+package Creational.AbstractFactory.Factory;
 
-import Creational.AbstractFactory5.Enum.MaterialType;
+import Creational.AbstractFactory.Enum.MaterialType;
 
 public class FurnitureFactory {
     private FurnitureFactory() {

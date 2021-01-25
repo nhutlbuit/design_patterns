@@ -1,6 +1,6 @@
-package Creational.AbstractFactory5.Services.Chair;
+package Creational.AbstractFactory.Services.Chair;
 
-import Creational.AbstractFactory5.Services.IChair;
+import Creational.AbstractFactory.Services.IChair;
 
 public class WoodChair implements IChair {
     @Override

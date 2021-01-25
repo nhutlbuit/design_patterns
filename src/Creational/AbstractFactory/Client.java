@@ -1,21 +1,30 @@
-package Creational.AbstractFactory5;
+package Creational.AbstractFactory;
 
-import Creational.AbstractFactory5.Services.IChair;
-import Creational.AbstractFactory5.Services.ITable;
-import Creational.AbstractFactory5.Enum.MaterialType;
-import Creational.AbstractFactory5.Factory.FurnitureAbstractFactory;
-import Creational.AbstractFactory5.Factory.FurnitureFactory;
+import Creational.AbstractFactory.Services.IBookShelf;
+import Creational.AbstractFactory.Services.IChair;
+import Creational.AbstractFactory.Services.ITable;
+import Creational.AbstractFactory.Enum.MaterialType;
+import Creational.AbstractFactory.Factory.FurnitureAbstractFactory;
+import Creational.AbstractFactory.Factory.FurnitureFactory;
+import Creational.AbstractFactory.Services.IWardrobe;
 
 public class Client {
     public static void main(String[] args) {
 
         FurnitureAbstractFactory factory = FurnitureFactory.getFactory(MaterialType.FLASTIC);
+       // FurnitureAbstractFactory factory = FurnitureFactory.getFactory(MaterialType.WOOD);
 
         IChair chair = factory.createChair();
         chair.create(); // Create plastic chair
 
         ITable table = factory.createTable();
         table.create(); // Create plastic table
+
+        IBookShelf bookShelf = factory.createBookShelf();
+        bookShelf.create(); // Create plastic bookShelf
+
+        IWardrobe wardrobe = factory.createWardrobe();
+        wardrobe.create(); // Create plastic wardrobe
     }
 }
 
@@ -60,4 +69,18 @@ Ví dụ: Một công ty đồ nội thất chuyên sản xuất ghế (Chair): 
 * Khi khách hàng cần mua một món đồ nào, khách hàng (Client) chỉ cần đến cửa hàng để mua (FunitureFactory).
 * Khi đó ứng với từng hàng hóa và vật liệu sẽ được chuyển về phân xưởng tương ứng để sản xuất (createXXX) ra bàn (Table) và ghế (Chair).
 * */
+
+
+/**
+ *
+ * Ví dụ: Một công ty đồ nội thất chuyên sản xuất ghế (Chair):
+ * +ghế nhựa (PlasticChair)
+ * + và ghế gỗ (WoodChair).
+ * Với tình hình kinh doanh ngày càng thuận thợi nên công ty quyết định mở rộng thêm sản xuất bàn (Table).
+ * Với lợi thế là đã có kinh nghiệm từ sản xuất ghế nên công ty vẫn giữ chất liệu là nhựa (PlasticTable) và gỗ (WoodTable) cho sản xuất bàn.
+ * Tuy nhiên, quy trình sản xuất ghế/ bàn theo từng chất liệu (MaterialType) là khác nhau. Nên công ty tách ra là làm 2 nhà máy:
+ * +  1 cho sản xuất vật liệu bằng nhựa (PlasticFactory),
+ * + 1 cho sản xuất vật liệu bằng gỗ (WoodFactory).
+ *  Nhưng cả 2 đều có thể sản xuất ghế và bàn. Khi khách hàng cần mua một món đồ nào, khách hàng (Client) chỉ cần đến cửa hàng để mua. Khi đó ứng với từng hàng hóa và vật liệu sẽ được chuyển về phân xưởng tương ứng để sản xuất (createXXX) ra bàn (Table) và ghế (Chair).
+ */
 

@@ -1,4 +1,4 @@
-package Creational.AbstractFactory5.Enum;
+package Creational.AbstractFactory.Enum;
 
 public enum MaterialType {
     FLASTIC, WOOD

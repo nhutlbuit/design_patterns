@@ -1,4 +1,4 @@
-package Creational.AbstractFactory5.Services;
+package Creational.AbstractFactory.Services;
 
 public interface ITable {
     void create();

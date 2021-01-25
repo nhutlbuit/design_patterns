@@ -1,6 +1,6 @@
-package Creational.AbstractFactory5.Services.Table;
+package Creational.AbstractFactory.Services.Table;
 
-import Creational.AbstractFactory5.Services.ITable;
+import Creational.AbstractFactory.Services.ITable;
 
 public class PlasticTable implements ITable {
     @Override
