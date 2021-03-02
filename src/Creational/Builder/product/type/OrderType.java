@@ -1,4 +1,4 @@
-package Creational.Builder2.product.type;
+package Creational.Builder.product.type;
 
 public enum OrderType {
     ON_SITE, TAKE_AWAY;

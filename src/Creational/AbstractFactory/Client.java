@@ -81,6 +81,8 @@ Ví dụ: Một công ty đồ nội thất chuyên sản xuất ghế (Chair): 
  * Tuy nhiên, quy trình sản xuất ghế/ bàn theo từng chất liệu (MaterialType) là khác nhau. Nên công ty tách ra là làm 2 nhà máy:
  * +  1 cho sản xuất vật liệu bằng nhựa (PlasticFactory),
  * + 1 cho sản xuất vật liệu bằng gỗ (WoodFactory).
- *  Nhưng cả 2 đều có thể sản xuất ghế và bàn. Khi khách hàng cần mua một món đồ nào, khách hàng (Client) chỉ cần đến cửa hàng để mua. Khi đó ứng với từng hàng hóa và vật liệu sẽ được chuyển về phân xưởng tương ứng để sản xuất (createXXX) ra bàn (Table) và ghế (Chair).
+ *  Nhưng cả 2 đều có thể sản xuất ghế và bàn. Khi khách hàng cần mua một món đồ nào, khách hàng (Client) chỉ cần đến cửa hàng để mua.
+ *  Khi đó ứng với từng hàng hóa và vật liệu sẽ được chuyển về phân xưởng tương ứng để sản xuất (createXXX) ra bàn (Table) và ghế (Chair).
+ *  https://gpcoder.com/4365-huong-dan-java-design-pattern-abstract-factory/
  */
 

@@ -1,4 +1,4 @@
-package Creational.Builder2.product.type;
+package Creational.Builder.product.type;
 
 public enum  BreadType {
     SIMPLE, OMELETTE, FRIED_EGG, GRILLED_FISH, PORK, BEEF,

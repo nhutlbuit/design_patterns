@@ -1,9 +1,9 @@
-package Creational.Builder2.product.order;
+package Creational.Builder.product.order;
 
-import Creational.Builder2.product.type.BreadType;
-import Creational.Builder2.product.type.OrderType;
-import Creational.Builder2.product.type.SauceType;
-import Creational.Builder2.product.type.VegetableType;
+import Creational.Builder.product.type.BreadType;
+import Creational.Builder.product.type.OrderType;
+import Creational.Builder.product.type.SauceType;
+import Creational.Builder.product.type.VegetableType;
 
 public class Order {
 

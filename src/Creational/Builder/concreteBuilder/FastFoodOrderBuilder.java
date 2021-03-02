@@ -1,11 +1,11 @@
-package Creational.Builder2.concreteBuilder;
+package Creational.Builder.concreteBuilder;
 
-import Creational.Builder2.builder.OrderBuilder;
-import Creational.Builder2.product.order.Order;
-import Creational.Builder2.product.type.BreadType;
-import Creational.Builder2.product.type.OrderType;
-import Creational.Builder2.product.type.SauceType;
-import Creational.Builder2.product.type.VegetableType;
+import Creational.Builder.builder.OrderBuilder;
+import Creational.Builder.product.order.Order;
+import Creational.Builder.product.type.BreadType;
+import Creational.Builder.product.type.OrderType;
+import Creational.Builder.product.type.SauceType;
+import Creational.Builder.product.type.VegetableType;
 
 
 public class FastFoodOrderBuilder implements OrderBuilder {

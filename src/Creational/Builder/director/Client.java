@@ -1,22 +1,25 @@
-package Creational.Builder2.director;
+package Creational.Builder.director;
 
-import Creational.Builder2.concreteBuilder.FastFoodOrderBuilder;
-import Creational.Builder2.product.order.Order;
-import Creational.Builder2.product.type.BreadType;
-import Creational.Builder2.product.type.OrderType;
-import Creational.Builder2.product.type.SauceType;
+import Creational.Builder.concreteBuilder.FastFoodOrderBuilder;
+import Creational.Builder.product.order.Order;
+import Creational.Builder.product.type.BreadType;
+import Creational.Builder.product.type.OrderType;
+import Creational.Builder.product.type.SauceType;
 
 public class Client {
 
     public static void main(String[] args) {
         Order order = new FastFoodOrderBuilder()
-                .orderType(OrderType.ON_SITE).orderBread(BreadType.OMELETTE)
-                .orderSauce(SauceType.SOY_SAUCE).build();
-        System.out.println(order);
+                .orderType(OrderType.ON_SITE)
+                .orderBread(BreadType.OMELETTE)
+                .orderSauce(SauceType.SOY_SAUCE)
+               // .orderVegetable(VegetableType.CUCUMBER)
+                .build();
+        System.out.println(order.toString());
     }
 }
 
-/*
+/**
 * ƯU ĐIỂM
 * Hỗ trợ, loại bớt việc phải viết nhiều constructor.
 Code dễ đọc, dễ bảo trì hơn khi số lượng thuộc tính (propery) bắt buộc để tạo một object từ 4 hoặc 5 propery.
@@ -33,11 +36,14 @@ Có thể tạo đối tượng immutable.
 
  * Tăng độ phức tạp của code (tổng thể) do số lượng class tăng lên.
  */
-/*
+
+/**
 * WHEN
 * Tạo một đối tượng phức tạp: có nhiều thuộc tính (nhiều hơn 4) và một số bắt buộc (requried), một số không bắt buộc (optional).
 Khi có quá nhiều hàm constructor, bạn nên nghĩ đến Builder.
 Muốn tách rời quá trình xây dựng một đối tượng phức tạp từ các phần tạo nên đối tượng.
 Muốn kiểm soát quá trình xây dựng.
 Khi người dùng (client) mong đợi nhiều cách khác nhau cho đối tượng được xây dựng.
+*
+* apply: lombok
 * */
