@@ -4,6 +4,7 @@ public class BankFactory {
 
     private BankFactory() {}
 
+    // singleton with static block
     public static final Bank getBankName(BankType bankType) {
 
         switch (bankType) {

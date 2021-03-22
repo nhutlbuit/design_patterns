@@ -6,4 +6,14 @@ public class VietComBank implements Bank{
     public String getBankName() {
         return "VietComBank";
     }
+
+    @Override
+    public String getBankNumber() {
+        return "4252626";
+    }
+
+    @Override
+    public String getBankType() {
+        return "Credit";
+    }
 }
